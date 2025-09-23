@@ -67,8 +67,15 @@ const Header = ({ activeSection, onSectionChange }: HeaderProps) => {
             ))}
           </nav>
 
-          {/* Theme Toggle & Mobile Menu */}
+          {/* Theme Toggle, Login & Mobile Menu */}
           <div className="flex items-center space-x-2 slide-in-right">
+            <a
+              href="/dashboard"
+              className="hidden md:inline-flex px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors"
+            >
+              Login
+            </a>
+            
             <Button
               variant="ghost"
               size="icon"
@@ -118,6 +125,12 @@ const Header = ({ activeSection, onSectionChange }: HeaderProps) => {
                   {item.label}
                 </button>
               ))}
+              <a
+                href="/dashboard"
+                className="px-4 py-3 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors text-center"
+              >
+                Login
+              </a>
             </div>
           </nav>
         )}
