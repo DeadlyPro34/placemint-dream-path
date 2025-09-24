@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
+import EnhancedHeader from "@/components/enhanced/EnhancedHeader";
+import EnhancedHeroSection from "@/components/enhanced/EnhancedHeroSection";
 import PlacementsSection from "@/components/PlacementsSection";
-import InternshipsSection from "@/components/InternshipsSection";
-import JobsSection from "@/components/JobsSection";
-import FeedbackSection from "@/components/FeedbackSection";
+import EnhancedInternshipsSection from "@/components/enhanced/EnhancedInternshipsSection";
+import EnhancedJobsSection from "@/components/enhanced/EnhancedJobsSection";
+import EnhancedFeedbackSection from "@/components/enhanced/EnhancedFeedbackSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -48,38 +48,30 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <Header 
+      {/* Enhanced Header */}
+      <EnhancedHeader 
         activeSection={activeSection} 
         onSectionChange={scrollToSection} 
       />
 
       {/* Main Content */}
       <main>
-        {/* Hero Section */}
-        <section id="home">
-          <HeroSection />
-        </section>
+        {/* Enhanced Hero Section with Day/Night Toggle */}
+        <EnhancedHeroSection />
 
         {/* Placements Section */}
         <section id="placements">
           <PlacementsSection />
         </section>
 
-        {/* Internships Section */}
-        <section id="internships">
-          <InternshipsSection />
-        </section>
+        {/* Enhanced Internships Section with Filters */}
+        <EnhancedInternshipsSection />
 
-        {/* Jobs Section */}
-        <section id="jobs">
-          <JobsSection />
-        </section>
+        {/* Enhanced Jobs Section with Filters */}
+        <EnhancedJobsSection />
 
-        {/* Feedback Section */}
-        <section id="feedback">
-          <FeedbackSection />
-        </section>
+        {/* Enhanced Feedback Section with Form */}
+        <EnhancedFeedbackSection />
       </main>
 
       {/* Footer */}
